@@ -14,10 +14,7 @@ export function Container({
   id,
 }: ContainerProps) {
   return (
-    <Component
-      id={id}
-      className={cn("mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-10", className)}
-    >
+    <Component id={id} className={cn("container-shell", className)}>
       {children}
     </Component>
   );

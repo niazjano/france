@@ -5,7 +5,8 @@ import { animate, useInView, useReducedMotion } from "framer-motion";
 import { impactStats } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Section } from "@/components/ui/Section";
 
 function AnimatedNumber({
   value,
@@ -52,31 +53,31 @@ export function ImpactStats() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="border-y border-border bg-background py-24 md:py-32">
+    <Section variant="muted">
       <Container>
-        <FadeIn className="max-w-2xl">
-          <SectionLabel>Notre engagement</SectionLabel>
-          <h2 className="section-heading mt-5 font-serif text-text">
-            Une mission claire, une action dédiée.
-          </h2>
+        <FadeIn>
+          <SectionHeader
+            label="Impact"
+            title="Une mission claire, une action dédiée."
+          />
         </FadeIn>
 
         <div
           ref={ref}
-          className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-20"
+          className="mt-20 grid gap-12 md:grid-cols-3 md:gap-10 lg:mt-28"
         >
           {impactStats.map((stat, index) => (
-            <FadeIn key={stat.label} delay={index * 0.08}>
-              <div className="border-t border-border pt-8">
-                <p className="text-5xl font-medium tracking-tight text-text md:text-6xl lg:text-7xl">
+            <FadeIn key={stat.label} delay={index * 0.06}>
+              <div className="surface-divider pt-10">
+                <p className="stat-number text-text">
                   <AnimatedNumber
                     value={stat.value}
                     suffix={stat.suffix}
                     isInView={isInView}
                   />
                 </p>
-                <p className="mt-3 font-serif text-2xl text-text">{stat.label}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+                <p className="mt-4 font-serif text-2xl text-text">{stat.label}</p>
+                <p className="body-text mt-3 text-sm md:text-base">
                   {stat.description}
                 </p>
               </div>
@@ -84,6 +85,6 @@ export function ImpactStats() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

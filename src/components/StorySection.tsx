@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Container } from "@/components/ui/Container";
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Section } from "@/components/ui/Section";
 import { ImageReveal } from "@/components/ui/ImageReveal";
 import { images } from "@/lib/images";
 
@@ -8,17 +9,17 @@ export function StorySection() {
   const { src, alt, objectPosition } = images.classroomTealWide;
 
   return (
-    <section className="bg-background py-24 md:py-32 lg:py-40">
+    <Section variant="surface">
       <Container>
-        <FadeIn className="max-w-3xl">
-          <SectionLabel>Récit</SectionLabel>
-          <h2 className="editorial-heading mt-5 font-serif text-text">
-            Une lumière dans l&apos;obscurité.
-          </h2>
+        <FadeIn>
+          <SectionHeader
+            label="Récit"
+            title="Une lumière dans l'obscurité."
+          />
         </FadeIn>
       </Container>
 
-      <div className="mt-14 md:mt-20">
+      <div className="mt-16 md:mt-24">
         <FadeIn>
           <ImageReveal
             src={src}
@@ -32,7 +33,7 @@ export function StorySection() {
         </FadeIn>
       </div>
 
-      <Container className="mt-14 md:mt-20">
+      <Container className="mt-16 md:mt-24">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
           <FadeIn className="lg:col-span-5">
             <h3 className="font-serif text-3xl leading-tight tracking-tight text-text md:text-4xl">
@@ -40,8 +41,8 @@ export function StorySection() {
             </h3>
           </FadeIn>
 
-          <FadeIn className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-            <div className="space-y-5 text-base leading-relaxed text-muted md:text-lg">
+          <FadeIn className="lg:col-span-6 lg:col-start-7" delay={0.08}>
+            <div className="space-y-6 body-text-lg">
               <p>
                 En Afghanistan, des millions d&apos;enfants — et surtout des
                 filles — restent privés d&apos;accès à l&apos;éducation formelle.
@@ -63,6 +64,6 @@ export function StorySection() {
           </FadeIn>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

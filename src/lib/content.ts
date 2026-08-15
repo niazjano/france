@@ -114,8 +114,8 @@ export const impactStats = [
   {
     value: 100,
     suffix: "%",
-    label: "Engagement",
-    description: "Toute notre énergie est dédiée à l'éducation et à l'autonomie des jeunes.",
+    label: "Dédiés à l'éducation",
+    description: "Toute notre énergie est consacrée à l'éducation et à l'autonomie des jeunes.",
   },
 ] as const;
 

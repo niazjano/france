@@ -1,19 +1,20 @@
 import { transparencyItems } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Section } from "@/components/ui/Section";
 
 export function Transparency() {
   return (
-    <section id="transparence" className="bg-surface py-24 md:py-32 lg:py-40">
+    <Section id="transparence" variant="surface">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           <FadeIn className="lg:col-span-5">
-            <SectionLabel>Transparence</SectionLabel>
-            <h2 className="editorial-heading mt-5 font-serif text-text">
-              Chaque euro doit avoir un impact.
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-muted md:text-lg">
+            <SectionHeader
+              label="Transparence"
+              title="Chaque euro doit avoir un impact."
+            />
+            <p className="body-text-lg mt-8">
               En tant qu&apos;association loi 1901, nous nous engageons à une
               utilisation responsable et traçable des dons. Chaque contribution
               finance directement des actions éducatives et humanitaires sur le
@@ -21,24 +22,24 @@ export function Transparency() {
             </p>
           </FadeIn>
 
-          <FadeIn className="lg:col-span-6 lg:col-start-7" delay={0.1}>
+          <FadeIn className="lg:col-span-6 lg:col-start-7" delay={0.08}>
             <div className="divide-y divide-border border-y border-border">
               {transparencyItems.map((item) => (
                 <div
                   key={item.amount}
-                  className="flex items-start justify-between gap-6 py-6 md:py-8"
+                  className="flex items-start justify-between gap-8 py-7 md:py-9"
                 >
                   <p className="text-3xl font-medium tracking-tight text-primary md:text-4xl">
                     {item.amount}
                   </p>
-                  <p className="max-w-xs pt-1 text-right text-sm leading-relaxed text-muted md:text-base">
+                  <p className="max-w-xs pt-1 text-right body-text">
                     {item.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-8 text-sm leading-relaxed text-muted">
+            <p className="body-text mt-10 text-sm">
               Les comptes de l&apos;association sont soumis aux règles de la
               loi 1901. Un rapport d&apos;activité détaillé sera publié
               régulièrement pour garantir une transparence totale envers nos
@@ -47,6 +48,6 @@ export function Transparency() {
           </FadeIn>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

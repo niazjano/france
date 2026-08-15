@@ -5,7 +5,8 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Section } from "@/components/ui/Section";
 
 const raised = 1200;
 const goal = 2000;
@@ -17,60 +18,53 @@ export function ImpactProgress() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="impact" className="border-y border-border bg-surface py-24 md:py-32">
+    <Section id="impact" variant="muted">
       <Container>
         <FadeIn>
-          <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel accent>Impact en cours</SectionLabel>
-            <h2 className="section-heading mt-5 font-serif text-text">
-              Votre soutien ouvre une salle de classe.
-            </h2>
-          </div>
+          <SectionHeader
+            label="Impact"
+            title="Votre soutien ouvre une salle de classe."
+            accent
+            align="center"
+          />
         </FadeIn>
 
-        <FadeIn delay={0.1}>
-          <div
-            ref={ref}
-            className="mx-auto mt-14 max-w-2xl rounded-sm border border-border bg-background p-8 md:p-10"
-          >
+        <FadeIn delay={0.08}>
+          <div ref={ref} className="card-soft mx-auto mt-16 max-w-2xl p-8 md:p-12">
             <div className="flex items-end justify-between gap-6">
               <div>
-                <p className="text-4xl font-medium tracking-tight text-text md:text-5xl">
-                  {raised.toLocaleString("fr-FR")} €
-                </p>
-                <p className="mt-1 text-sm text-muted">collectés</p>
+                <p className="stat-number text-text">{raised.toLocaleString("fr-FR")} €</p>
+                <p className="mt-2 text-sm text-muted">collectés</p>
               </div>
               <div className="text-right">
-                <p className="text-4xl font-medium tracking-tight text-text/40 md:text-5xl">
-                  {goal.toLocaleString("fr-FR")} €
-                </p>
-                <p className="mt-1 text-sm text-muted">objectif</p>
+                <p className="stat-number text-text/35">{goal.toLocaleString("fr-FR")} €</p>
+                <p className="mt-2 text-sm text-muted">objectif</p>
               </div>
             </div>
 
-            <div className="mt-8 h-1.5 overflow-hidden rounded-full bg-border">
+            <div className="mt-10 h-1 overflow-hidden rounded-full bg-border">
               <motion.div
                 className="h-full rounded-full bg-primary"
                 initial={{ width: "0%" }}
                 animate={{ width: isInView ? `${percentage}%` : "0%" }}
                 transition={{
-                  duration: shouldReduceMotion ? 0 : 0.9,
+                  duration: shouldReduceMotion ? 0 : 0.8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               />
             </div>
 
-            <div className="mt-4 flex items-center justify-between text-sm">
+            <div className="mt-5 flex flex-col gap-1 text-sm sm:flex-row sm:items-center sm:justify-between">
               <span className="font-medium text-primary">{percentage}% financé</span>
               <span className="text-muted">Projet salle de classe — Afghanistan</span>
             </div>
 
-            <div className="mt-8 flex justify-center">
+            <div className="mt-10 flex justify-center">
               <Button href="#don">Contribuer au projet</Button>
             </div>
           </div>
         </FadeIn>
       </Container>
-    </section>
+    </Section>
   );
 }

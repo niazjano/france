@@ -18,12 +18,12 @@ export function Hero() {
           className="object-cover"
           style={{ objectPosition }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/65" />
       </div>
 
-      <Container className="relative flex min-h-[100svh] flex-col justify-end pb-24 pt-32 md:pb-28 md:pt-36">
+      <Container className="relative flex min-h-[100svh] flex-col justify-end pb-28 pt-36 md:pb-32 md:pt-40">
         <div className="max-w-4xl">
-          <p className="mb-6 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-white/70">
+          <p className="mb-8 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-white/65">
             Éducation • Afghanistan
           </p>
 
@@ -35,12 +35,12 @@ export function Hero() {
             attendre.
           </h1>
 
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
+          <p className="mt-10 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
             Nous ouvrons des portes vers l&apos;éducation pour les enfants qui
             en ont le plus besoin.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button href="#don" variant="accent">
               Faire un don
             </Button>
@@ -51,14 +51,14 @@ export function Hero() {
         </div>
 
         <div
-          className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block"
+          className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block"
           aria-hidden="true"
         >
           <div className="flex flex-col items-center gap-3">
-            <span className="text-[0.625rem] uppercase tracking-[0.24em] text-white/50">
+            <span className="text-[0.625rem] uppercase tracking-[0.24em] text-white/45">
               Défiler
             </span>
-            <div className="h-10 w-px animate-pulse bg-white/40" />
+            <div className="h-12 w-px bg-white/30" />
           </div>
         </div>
       </Container>
