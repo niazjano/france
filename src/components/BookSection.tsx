@@ -21,10 +21,10 @@ export function BookSection() {
                 width={800}
                 height={600}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                wrapperClassName="aspect-[4/3] rounded-lg"
+                wrapperClassName="aspect-[4/3] rounded-2xl"
                 objectPosition={objectPosition}
               />
-              <div className="absolute -bottom-5 -right-3 hidden rounded-lg border border-border bg-background px-5 py-4 shadow-[var(--shadow-soft)] md:block">
+              <div className="absolute -bottom-5 -right-3 hidden rounded-2xl border border-border bg-background px-5 py-4 shadow-[var(--shadow-soft)] md:block">
                 <p className="text-xs uppercase tracking-[0.18em] text-muted">
                   Projet éducatif
                 </p>

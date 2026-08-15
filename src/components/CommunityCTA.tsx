@@ -33,7 +33,7 @@ export function CommunityCTA() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.08} className="relative min-h-[420px] lg:min-h-[640px]">
+        <FadeIn delay={0.08} className="relative min-h-[420px] overflow-hidden lg:min-h-[640px] lg:rounded-l-2xl">
           <Image
             src={src}
             alt={alt}

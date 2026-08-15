@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import { Instrument_Serif } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,9 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="fr"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${instrumentSerif.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-background text-text">{children}</body>
+      <body className="min-h-full bg-background text-text">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

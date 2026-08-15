@@ -10,32 +10,31 @@ export function Donation() {
     <Section id="don" variant="primary">
       <Container>
         <FadeIn className="max-w-3xl">
-          <SectionLabel className="text-white/55">Soutenir</SectionLabel>
-          <h2 className="editorial-heading mt-5 font-serif text-white">
-            Devenez donateur
+          <SectionLabel>Soutenir École Libre</SectionLabel>
+          <h2 className="editorial-heading mt-5 font-serif text-[#F7F4EC]">
+            Changez une vie
             <br />
-            mensuel.
+            chaque mois.
           </h2>
-          <p className="mt-5 text-xl text-white/85 md:text-2xl">
-            Changez une vie chaque mois.
-          </p>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#F7F4EC]/75 md:text-lg">
             Nous cherchons des donateurs actifs et engagés prêts à soutenir
             l&apos;éducation des enfants défavorisés en Afghanistan.
           </p>
         </FadeIn>
 
-        <div className="mt-20 grid gap-5 md:grid-cols-2">
+        <div className="mt-16 grid gap-5 md:mt-20 md:grid-cols-3">
           {donationTiers.map((tier, index) => (
             <FadeIn key={tier.amount} delay={index * 0.06}>
-              <div className="flex h-full flex-col rounded-xl border border-white/12 bg-white/[0.06] p-8 backdrop-blur-sm transition-colors duration-500 hover:bg-white/[0.1] md:p-10">
+              <div className="flex h-full flex-col rounded-2xl border border-[#F7F4EC]/12 bg-[#F7F4EC]/[0.06] p-8 backdrop-blur-sm transition-all duration-500 hover:bg-[#F7F4EC]/[0.1] md:p-10">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-medium tracking-tight md:text-5xl">
+                  <span className="font-serif text-3xl tracking-tight text-[#F7F4EC] md:text-4xl">
                     {tier.amount}
                   </span>
-                  <span className="text-white/55">{tier.period}</span>
+                  {tier.period ? (
+                    <span className="text-[#F7F4EC]/55">{tier.period}</span>
+                  ) : null}
                 </div>
-                <p className="mt-6 flex-1 text-base leading-relaxed text-white/75">
+                <p className="mt-6 flex-1 text-base leading-relaxed text-[#F7F4EC]/75">
                   {tier.description}
                 </p>
               </div>
@@ -45,8 +44,11 @@ export function Donation() {
 
         <FadeIn delay={0.12}>
           <div className="mt-14 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href="mailto:contact@ecolelibre.org?subject=Donateur%20mensuel" variant="accent">
-              Je deviens donateur mensuel
+            <Button
+              href="mailto:contact@ecolelibre.org?subject=Donateur%20mensuel"
+              variant="gold"
+            >
+              Faire un don
             </Button>
             <Button href="mailto:contact@ecolelibre.org" variant="secondary">
               Nous contacter

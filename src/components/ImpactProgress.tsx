@@ -44,7 +44,7 @@ export function ImpactProgress() {
 
             <div className="mt-10 h-1 overflow-hidden rounded-full bg-border">
               <motion.div
-                className="h-full rounded-full bg-primary"
+                className="h-full rounded-full bg-accent"
                 initial={{ width: "0%" }}
                 animate={{ width: isInView ? `${percentage}%` : "0%" }}
                 transition={{
@@ -55,7 +55,7 @@ export function ImpactProgress() {
             </div>
 
             <div className="mt-5 flex flex-col gap-1 text-sm sm:flex-row sm:items-center sm:justify-between">
-              <span className="font-medium text-primary">{percentage}% financé</span>
+              <span className="font-medium text-accent">{percentage}% financé</span>
               <span className="text-muted">Projet salle de classe — Afghanistan</span>
             </div>
 

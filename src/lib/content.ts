@@ -1,4 +1,13 @@
 import { images, type SiteImage } from "./images";
+import type { LucideIcon } from "lucide-react";
+import {
+  BookOpen,
+  GraduationCap,
+  Laptop,
+  Package,
+  Scissors,
+  Users,
+} from "lucide-react";
 
 export const navLinks = [
   { label: "Notre mission", href: "#mission" },
@@ -13,6 +22,7 @@ type ActionItem = {
   title: string;
   description: string;
   image: SiteImage;
+  icon: LucideIcon;
 };
 
 export const actions: ActionItem[] = [
@@ -22,6 +32,7 @@ export const actions: ActionItem[] = [
     description:
       "Des espaces d'apprentissage pour les enfants privés d'école, avec un accompagnement patient et adapté.",
     image: images.literacyWriting,
+    icon: BookOpen,
   },
   {
     number: "02",
@@ -29,6 +40,7 @@ export const actions: ActionItem[] = [
     description:
       "Des formations professionnelles pour les jeunes filles, alliant compétences techniques et autonomie.",
     image: images.vocationalSewing,
+    icon: Scissors,
   },
   {
     number: "03",
@@ -36,6 +48,7 @@ export const actions: ActionItem[] = [
     description:
       "L'accès aux outils numériques comme levier d'insertion et d'ouverture vers de nouvelles opportunités.",
     image: images.classroomTealWide,
+    icon: Laptop,
   },
   {
     number: "04",
@@ -43,6 +56,7 @@ export const actions: ActionItem[] = [
     description:
       "Un engagement prioritaire pour garantir à chaque fille le droit d'apprendre, grandir et choisir son avenir.",
     image: images.communityClassroom,
+    icon: Users,
   },
   {
     number: "05",
@@ -50,6 +64,7 @@ export const actions: ActionItem[] = [
     description:
       "Un accompagnement régulier pour consolider les acquis et maintenir la motivation des élèves.",
     image: images.classroomTealGroup,
+    icon: GraduationCap,
   },
   {
     number: "06",
@@ -57,6 +72,7 @@ export const actions: ActionItem[] = [
     description:
       "Cahiers, stylos, manuels : le matériel essentiel pour que l'école redevienne une réalité concrète.",
     image: images.roadSafetyBooks,
+    icon: Package,
   },
 ];
 
@@ -147,6 +163,17 @@ export const donationTiers = [
     description:
       "École + kit hygiène et eau potable pour la famille de l'enfant.",
   },
+  {
+    amount: "Montant libre",
+    period: "",
+    description:
+      "Choisissez le montant qui correspond à votre engagement. Chaque contribution compte.",
+  },
+] as const;
+
+export const legalLinks = [
+  { label: "Politique de confidentialité", href: "#" },
+  { label: "Mentions légales", href: "#" },
 ] as const;
 
 export const newsItems = [

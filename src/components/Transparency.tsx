@@ -3,50 +3,42 @@ import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 
 export function Transparency() {
   return (
-    <Section id="transparence" variant="surface">
+    <Section id="transparence">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
-          <FadeIn className="lg:col-span-5">
-            <SectionHeader
-              label="Transparence"
-              title="Chaque euro doit avoir un impact."
-            />
-            <p className="body-text-lg mt-8">
-              En tant qu&apos;association loi 1901, nous nous engageons à une
-              utilisation responsable et traçable des dons. Chaque contribution
-              finance directement des actions éducatives et humanitaires sur le
-              terrain.
-            </p>
-          </FadeIn>
+        <FadeIn>
+          <SectionHeader
+            label="Transparence"
+            title="Chaque euro doit avoir un impact."
+            description="En tant qu'association loi 1901, nous nous engageons à une utilisation responsable et traçable des dons. Chaque contribution finance directement des actions éducatives et humanitaires sur le terrain."
+            align="center"
+            className="mx-auto"
+          />
+        </FadeIn>
 
-          <FadeIn className="lg:col-span-6 lg:col-start-7" delay={0.08}>
-            <div className="divide-y divide-border border-y border-border">
-              {transparencyItems.map((item) => (
-                <div
-                  key={item.amount}
-                  className="flex items-start justify-between gap-8 py-7 md:py-9"
-                >
-                  <p className="text-3xl font-medium tracking-tight text-primary md:text-4xl">
-                    {item.amount}
-                  </p>
-                  <p className="max-w-xs pt-1 text-right body-text">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="body-text mt-10 text-sm">
-              Les comptes de l&apos;association sont soumis aux règles de la
-              loi 1901. Un rapport d&apos;activité détaillé sera publié
-              régulièrement pour garantir une transparence totale envers nos
-              donateurs.
-            </p>
-          </FadeIn>
+        <div className="mt-16 grid gap-5 md:mt-20 md:grid-cols-3">
+          {transparencyItems.map((item, index) => (
+            <FadeIn key={item.amount} delay={index * 0.06}>
+              <Card hover className="text-center">
+                <p className="font-serif text-4xl tracking-tight text-primary dark:text-accent md:text-5xl">
+                  {item.amount}
+                </p>
+                <p className="body-text mt-4">{item.description}</p>
+              </Card>
+            </FadeIn>
+          ))}
         </div>
+
+        <FadeIn delay={0.12}>
+          <p className="body-text mx-auto mt-12 max-w-2xl text-center text-sm">
+            Les comptes de l&apos;association sont soumis aux règles de la loi
+            1901. Un rapport d&apos;activité détaillé sera publié régulièrement
+            pour garantir une transparence totale envers nos donateurs.
+          </p>
+        </FadeIn>
       </Container>
     </Section>
   );

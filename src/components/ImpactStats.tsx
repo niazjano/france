@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 
 function AnimatedNumber({
   value,
@@ -41,11 +42,7 @@ function AnimatedNumber({
     return () => controls.stop();
   }, [isInView, shouldReduceMotion, suffix, value]);
 
-  return (
-    <span ref={ref}>
-      0{suffix}
-    </span>
-  );
+  return <span ref={ref}>0{suffix}</span>;
 }
 
 export function ImpactStats() {
@@ -53,34 +50,38 @@ export function ImpactStats() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <Section variant="muted">
+    <Section id="impact-stats" variant="default">
       <Container>
         <FadeIn>
           <SectionHeader
             label="Impact"
             title="Une mission claire, une action dédiée."
+            align="center"
+            className="mx-auto"
           />
         </FadeIn>
 
         <div
           ref={ref}
-          className="mt-20 grid gap-12 md:grid-cols-3 md:gap-10 lg:mt-28"
+          className="mt-16 grid gap-5 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-6"
         >
           {impactStats.map((stat, index) => (
             <FadeIn key={stat.label} delay={index * 0.06}>
-              <div className="surface-divider pt-10">
-                <p className="stat-number text-text">
+              <Card className="text-center">
+                <p className="stat-number text-primary dark:text-accent">
                   <AnimatedNumber
                     value={stat.value}
                     suffix={stat.suffix}
                     isInView={isInView}
                   />
                 </p>
-                <p className="mt-4 font-serif text-2xl text-text">{stat.label}</p>
+                <p className="mt-4 font-serif text-2xl text-text">
+                  {stat.label}
+                </p>
                 <p className="body-text mt-3 text-sm md:text-base">
                   {stat.description}
                 </p>
-              </div>
+              </Card>
             </FadeIn>
           ))}
         </div>

@@ -48,7 +48,7 @@ export function Mission() {
             width={1320}
             height={760}
             sizes="(max-width: 768px) 100vw, 1320px"
-            wrapperClassName="aspect-[4/3] md:aspect-[21/9] rounded-lg"
+            wrapperClassName="aspect-[4/3] md:aspect-[21/9] rounded-2xl"
             objectPosition={objectPosition}
           />
         </FadeIn>

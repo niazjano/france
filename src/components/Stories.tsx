@@ -37,7 +37,7 @@ export function Stories() {
                     reversed ? "lg:[&>*:first-child]:order-2" : ""
                   }`}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg lg:col-span-7">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:col-span-7">
                     <Image
                       src={story.image.src}
                       alt={story.image.alt}
