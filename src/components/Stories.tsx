@@ -33,11 +33,12 @@ export function Stories() {
                 >
                   <div className="relative aspect-[4/3] overflow-hidden lg:col-span-7">
                     <Image
-                      src={story.image}
-                      alt={story.alt}
+                      src={story.image.src}
+                      alt={story.image.alt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 60vw"
                       className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                      style={{ objectPosition: story.image.objectPosition }}
                     />
                   </div>
 

@@ -34,11 +34,12 @@ export function ActionGrid() {
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
-                    src={action.image}
-                    alt={action.alt}
+                    src={action.image.src}
+                    alt={action.image.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+                    style={{ objectPosition: action.image.objectPosition }}
                   />
                 </div>
 

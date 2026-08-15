@@ -4,16 +4,19 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 export function Hero() {
+  const { src, alt, objectPosition } = images.hero;
+
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-primary-dark">
       <div className="absolute inset-0">
         <Image
-          src={images.hero}
-          alt="Enfants en classe, concentrés sur leur apprentissage en Afghanistan"
+          src={src}
+          alt={alt}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/70" />
       </div>

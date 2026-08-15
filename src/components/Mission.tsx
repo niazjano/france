@@ -5,6 +5,8 @@ import { ImageReveal } from "@/components/ui/ImageReveal";
 import { images } from "@/lib/images";
 
 export function Mission() {
+  const { src, alt, objectPosition } = images.literacyWriting;
+
   return (
     <section id="mission" className="bg-background py-24 md:py-32 lg:py-40">
       <Container>
@@ -36,12 +38,13 @@ export function Mission() {
 
         <FadeIn className="mt-16 md:mt-24" delay={0.15}>
           <ImageReveal
-            src={images.mission}
-            alt="Enfants écrivant attentivement sur le sol d'une salle de classe"
+            src={src}
+            alt={alt}
             width={1320}
             height={760}
             sizes="(max-width: 768px) 100vw, 1320px"
-            wrapperClassName="aspect-[16/9] md:aspect-[21/9] rounded-sm"
+            wrapperClassName="aspect-[4/3] md:aspect-[21/9] rounded-sm"
+            objectPosition={objectPosition}
           />
         </FadeIn>
       </Container>

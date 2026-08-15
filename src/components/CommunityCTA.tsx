@@ -4,6 +4,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 
 export function CommunityCTA() {
+  const { src, alt, objectPosition } = images.communityClassroom;
+
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="grid lg:grid-cols-2">
@@ -32,11 +34,12 @@ export function CommunityCTA() {
 
         <FadeIn delay={0.1} className="relative min-h-[420px] lg:min-h-[560px]">
           <Image
-            src={images.childrenJoy}
-            alt="Enfants souriants en classe, pleins d'enthousiasme pour apprendre"
+            src={src}
+            alt={alt}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
+            style={{ objectPosition }}
           />
         </FadeIn>
       </div>

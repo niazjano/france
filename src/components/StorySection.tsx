@@ -5,6 +5,8 @@ import { ImageReveal } from "@/components/ui/ImageReveal";
 import { images } from "@/lib/images";
 
 export function StorySection() {
+  const { src, alt, objectPosition } = images.classroomTealWide;
+
   return (
     <section className="bg-background py-24 md:py-32 lg:py-40">
       <Container>
@@ -19,12 +21,13 @@ export function StorySection() {
       <div className="mt-14 md:mt-20">
         <FadeIn>
           <ImageReveal
-            src={images.classroomWide}
-            alt="Salle de classe avec de nombreux enfants assis au sol, absorbés par leur travail"
+            src={src}
+            alt={alt}
             width={1920}
             height={1080}
             sizes="100vw"
             wrapperClassName="aspect-[4/3] md:aspect-[21/9]"
+            objectPosition={objectPosition}
           />
         </FadeIn>
       </div>

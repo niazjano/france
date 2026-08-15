@@ -9,6 +9,7 @@ type ImageRevealProps = Omit<ImageProps, "className"> & {
   className?: string;
   wrapperClassName?: string;
   priority?: boolean;
+  objectPosition?: string;
 };
 
 export function ImageReveal({
@@ -16,6 +17,8 @@ export function ImageReveal({
   wrapperClassName,
   alt,
   priority = false,
+  objectPosition = "center center",
+  style,
   ...props
 }: ImageRevealProps) {
   const shouldReduceMotion = useReducedMotion();
@@ -34,6 +37,7 @@ export function ImageReveal({
         alt={alt}
         priority={priority}
         className={cn("h-full w-full object-cover", className)}
+        style={{ objectPosition, ...style }}
       />
     </motion.div>
   );

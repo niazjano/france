@@ -1,4 +1,4 @@
-import { images } from "./images";
+import { images, type SiteImage } from "./images";
 
 export const navLinks = [
   { label: "Notre mission", href: "#mission" },
@@ -8,91 +8,95 @@ export const navLinks = [
   { label: "Actualités", href: "#actualites" },
 ] as const;
 
-export const actions = [
+type ActionItem = {
+  number: string;
+  title: string;
+  description: string;
+  image: SiteImage;
+};
+
+export const actions: ActionItem[] = [
   {
     number: "01",
     title: "Cours d'alphabétisation",
     description:
       "Des espaces d'apprentissage pour les enfants privés d'école, avec un accompagnement patient et adapté.",
-    image: images.mission,
-    alt: "Enfants concentrés sur leurs cahiers lors d'un cours d'alphabétisation",
+    image: images.literacyWriting,
   },
   {
     number: "02",
     title: "Ateliers de couture",
     description:
       "Des formations professionnelles pour les jeunes filles, alliant compétences techniques et autonomie.",
-    image: images.tailoringClass,
-    alt: "Jeunes femmes en formation de couture autour d'une table",
+    image: images.vocationalSewing,
   },
   {
     number: "03",
     title: "Formation informatique",
     description:
       "L'accès aux outils numériques comme levier d'insertion et d'ouverture vers de nouvelles opportunités.",
-    image: images.classroomWide,
-    alt: "Salle de classe avec enfants en apprentissage",
+    image: images.classroomTealWide,
   },
   {
     number: "04",
     title: "Éducation des jeunes filles",
     description:
       "Un engagement prioritaire pour garantir à chaque fille le droit d'apprendre, grandir et choisir son avenir.",
-    image: images.hero,
-    alt: "Jeunes filles en classe, attentives à leur travail",
+    image: images.communityClassroom,
   },
   {
     number: "05",
     title: "Soutien scolaire",
     description:
       "Un accompagnement régulier pour consolider les acquis et maintenir la motivation des élèves.",
-    image: images.classroomGroup,
-    alt: "Groupe d'enfants réunis pour une session de soutien scolaire",
+    image: images.classroomTealGroup,
   },
   {
     number: "06",
     title: "Distribution de fournitures",
     description:
       "Cahiers, stylos, manuels : le matériel essentiel pour que l'école redevienne une réalité concrète.",
-    image: images.childrenJoy,
-    alt: "Enfants tenant leurs cahiers avec enthousiasme",
+    image: images.roadSafetyBooks,
   },
-] as const;
+];
 
-export const stories = [
+type StoryItem = {
+  category: string;
+  title: string;
+  description: string;
+  image: SiteImage;
+};
+
+export const stories: StoryItem[] = [
   {
     category: "Éducation",
     title: "Quand l'école reprend vie dans une pièce du quartier",
     description:
       "Sans bâtiment scolaire, l'apprentissage se fait sur un tapis, autour de feuilles blanches et de stylos. Chaque matin, des enfants arrivent avec la même envie : apprendre à lire, écrire, compter.",
-    image: images.classroomWide,
-    alt: "Grande salle de classe avec enfants assis au sol sur un tapis",
+    image: images.classroomTealGroup,
   },
   {
     category: "Autonomie",
     title: "La couture comme chemin vers l'indépendance",
     description:
       "Pour de nombreuses jeunes filles, une formation professionnelle ouvre des perspectives concrètes. Les ateliers deviennent un espace de confiance, de compétence et de dignité.",
-    image: images.tailoringClass,
-    alt: "Formation professionnelle en couture pour jeunes femmes",
+    image: images.vocationalSewing,
   },
   {
     category: "Communauté",
     title: "L'apprentissage, un acte collectif",
     description:
       "Derrière chaque enfant qui écrit, il y a une communauté qui croit en l'avenir. Parents, bénévoles, enseignants : tous contribuent à tenir la porte de l'école ouverte.",
-    image: images.classroomBehind,
-    alt: "Vue depuis l'arrière d'une classe communautaire",
+    image: images.classroomTealWide,
   },
   {
     category: "Espoir",
     title: "La joie d'apprendre, malgré tout",
     description:
       "Dans des contextes difficiles, la curiosité des enfants reste intacte. Un cahier neuf, un sourire, un mot lu pour la première fois : autant de victoires qui comptent.",
-    image: images.childrenJoy,
-    alt: "Enfants souriants montrant leurs cahiers en classe",
+    image: images.literacyWriting,
   },
-] as const;
+];
 
 export const impactStats = [
   {

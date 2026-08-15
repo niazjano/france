@@ -6,6 +6,8 @@ import { ImageReveal } from "@/components/ui/ImageReveal";
 import { images } from "@/lib/images";
 
 export function BookSection() {
+  const { src, alt, objectPosition } = images.roadSafetyBooks;
+
   return (
     <section className="overflow-hidden bg-surface py-24 md:py-32 lg:py-40">
       <Container>
@@ -13,12 +15,13 @@ export function BookSection() {
           <FadeIn className="lg:col-span-6">
             <div className="relative">
               <ImageReveal
-                src={images.classroomGroup}
-                alt="Enfants en classe utilisant des cahiers et du matériel éducatif"
+                src={src}
+                alt={alt}
                 width={800}
-                height={1000}
+                height={600}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                wrapperClassName="aspect-[4/5] rounded-sm shadow-[0_24px_80px_-40px_rgba(8,99,154,0.35)]"
+                wrapperClassName="aspect-[4/3] rounded-sm shadow-[0_24px_80px_-40px_rgba(8,99,154,0.35)]"
+                objectPosition={objectPosition}
               />
               <div className="absolute -bottom-6 -right-4 hidden rounded-sm border border-border bg-background px-5 py-4 md:block">
                 <p className="text-xs uppercase tracking-[0.18em] text-muted">
