@@ -230,6 +230,42 @@ body {
     color var(--transition-base);
 }
 
+.hero-text-shadow {
+  text-shadow:
+    0 2px 20px rgba(0, 0, 0, 0.45),
+    0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text-backdrop {
+  pointer-events: none;
+  position: absolute;
+  inset: -2rem -1.5rem -2.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.28) 42%,
+    rgba(0, 0, 0, 0.08) 68%,
+    transparent 100%
+  );
+}
+
+.dark .hero-text-backdrop {
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.34) 42%,
+    rgba(0, 0, 0, 0.12) 68%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .hero-text-backdrop {
+    inset: -2.5rem -2rem -3rem;
+  }
+}
+
 .dark .icon-circle {
   background: color-mix(in srgb, var(--accent) 14%, var(--surface));
   color: var(--accent);
