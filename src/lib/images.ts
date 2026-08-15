@@ -1,3 +1,5 @@
+import { assetPath } from "./asset-path";
+
 /**
  * Image inventory — internal reference for art direction
  *
@@ -45,37 +47,37 @@ export type SiteImage = {
 
 export const images = {
   hero: {
-    src: "/images/hero/education-classroom-focus.png",
+    src: assetPath("/images/hero/education-classroom-focus.png"),
     alt: "Enfants assis sur un tapis rouge dans une salle de classe éclairée, concentrés sur leur apprentissage",
     objectPosition: "center 42%",
   },
   literacyWriting: {
-    src: "/images/education/literacy-writing-session.png",
+    src: assetPath("/images/education/literacy-writing-session.png"),
     alt: "Quatre enfants écrivant attentivement sur des feuilles posées sur un tapis vert",
     objectPosition: "center 55%",
   },
   classroomTealWide: {
-    src: "/images/education/classroom-teal-wide.png",
+    src: assetPath("/images/education/classroom-teal-wide.png"),
     alt: "Grande salle de classe avec de nombreux enfants assis sur un tapis bleu-vert, absorbés par leur travail",
     objectPosition: "center 45%",
   },
   classroomTealGroup: {
-    src: "/images/education/classroom-teal-group.png",
+    src: assetPath("/images/education/classroom-teal-group.png"),
     alt: "Groupe d'enfants en classe sur un tapis bleu-vert, certains écrivant sur des feuilles blanches",
     objectPosition: "55% 50%",
   },
   vocationalSewing: {
-    src: "/images/projects/vocational-sewing-class.png",
+    src: assetPath("/images/projects/vocational-sewing-class.png"),
     alt: "Jeunes femmes assises autour d'une table, suivant une formation avec un schéma dessiné au tableau",
     objectPosition: "center center",
   },
   roadSafetyBooks: {
-    src: "/images/projects/road-safety-books.png",
+    src: assetPath("/images/projects/road-safety-books.png"),
     alt: "Enfants en classe montrant avec enthousiasme leurs cahiers et livres éducatifs",
     objectPosition: "center 40%",
   },
   communityClassroom: {
-    src: "/images/stories/community-classroom-behind.png",
+    src: assetPath("/images/stories/community-classroom-behind.png"),
     alt: "Vue depuis l'arrière d'une classe où des filles en foulards colorés participent à une session d'apprentissage",
     objectPosition: "center 35%",
   },
