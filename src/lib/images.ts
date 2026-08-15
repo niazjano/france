@@ -3,10 +3,10 @@ import { assetPath } from "./asset-path";
 /**
  * Image inventory — internal reference for art direction
  *
- * hero/education-classroom-focus
- *   Content: Sunlit classroom, girl in headscarf looking toward camera, children writing on red carpet
- *   Primary: Hero (cinematic full-screen)
- *   Crop: 16:9 / 100svh, object-position center 40%
+ * hero/hero-books-celebration
+ *   Content: Children in classroom celebrating, holding educational books and notebooks
+ *   Primary: Hero (cinematic full-screen banner)
+ *   Crop: 16:9 / 100svh, object-position center 45%
  *
  * education/literacy-writing-session
  *   Content: Four children writing on green patterned carpet, close intimate angle
@@ -47,9 +47,9 @@ export type SiteImage = {
 
 export const images = {
   hero: {
-    src: assetPath("/images/hero/education-classroom-focus.png"),
-    alt: "Enfants assis sur un tapis rouge dans une salle de classe éclairée, concentrés sur leur apprentissage",
-    objectPosition: "center 42%",
+    src: assetPath("/images/hero/hero-books-celebration.png"),
+    alt: "Enfants en classe célébrant avec enthousiasme leurs livres et cahiers éducatifs",
+    objectPosition: "center 45%",
   },
   literacyWriting: {
     src: assetPath("/images/education/literacy-writing-session.png"),
