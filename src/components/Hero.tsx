@@ -1,24 +1,16 @@
-import Image from "next/image";
-import { images } from "@/lib/images";
+import { heroVideo } from "@/lib/videos";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { HeroVideoBackground } from "@/components/HeroVideoBackground";
 
 export function Hero() {
-  const { src, alt, objectPosition } = images.hero;
+  const { src, poster, type } = heroVideo;
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-black">
       <div className="absolute inset-0">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition }}
-        />
+        <HeroVideoBackground src={src} poster={poster} type={type} />
       </div>
 
       <Container className="relative flex min-h-[100svh] flex-col justify-end pb-28 pt-36 md:pb-32 md:pt-40">

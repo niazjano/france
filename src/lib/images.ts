@@ -5,7 +5,7 @@ import { assetPath } from "./asset-path";
  *
  * hero/hero-classroom-teal-session
  *   Content: Wide classroom, children on teal patterned carpet writing and reading
- *   Primary: Hero (cinematic full-screen banner)
+ *   Primary: Hero video poster / fallback frame
  *   Crop: 16:9 / 100svh, object-position center 50%
  *
  * education/literacy-writing-session
