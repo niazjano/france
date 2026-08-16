@@ -3,10 +3,10 @@ import { assetPath } from "./asset-path";
 /**
  * Image inventory — internal reference for art direction
  *
- * hero/hero-books-celebration
- *   Content: Children in classroom celebrating, holding educational books and notebooks
+ * hero/hero-classroom-teal-session
+ *   Content: Wide classroom, children on teal patterned carpet writing and reading
  *   Primary: Hero (cinematic full-screen banner)
- *   Crop: 16:9 / 100svh, object-position center 45%
+ *   Crop: 16:9 / 100svh, object-position center 50%
  *
  * education/literacy-writing-session
  *   Content: Four children writing on green patterned carpet, close intimate angle
@@ -47,9 +47,9 @@ export type SiteImage = {
 
 export const images = {
   hero: {
-    src: assetPath("/images/hero/hero-books-celebration.png"),
-    alt: "Enfants en classe célébrant avec enthousiasme leurs livres et cahiers éducatifs",
-    objectPosition: "center 45%",
+    src: assetPath("/images/hero/hero-classroom-teal-session.jpg"),
+    alt: "Grande salle de classe avec des enfants assis sur un tapis bleu-vert, concentrés sur leur travail scolaire",
+    objectPosition: "center 50%",
   },
   literacyWriting: {
     src: assetPath("/images/education/literacy-writing-session.png"),
