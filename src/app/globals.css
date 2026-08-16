@@ -232,38 +232,14 @@ body {
 
 .hero-text-shadow {
   text-shadow:
-    0 2px 20px rgba(0, 0, 0, 0.45),
-    0 1px 4px rgba(0, 0, 0, 0.35);
+    0 1px 10px rgba(0, 0, 0, 0.28),
+    0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.hero-text-backdrop {
-  pointer-events: none;
-  position: absolute;
-  inset: -2rem -1.5rem -2.5rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(
-    105deg,
-    rgba(0, 0, 0, 0.52) 0%,
-    rgba(0, 0, 0, 0.28) 42%,
-    rgba(0, 0, 0, 0.08) 68%,
-    transparent 100%
-  );
-}
-
-.dark .hero-text-backdrop {
-  background: linear-gradient(
-    105deg,
-    rgba(0, 0, 0, 0.62) 0%,
-    rgba(0, 0, 0, 0.34) 42%,
-    rgba(0, 0, 0, 0.12) 68%,
-    transparent 100%
-  );
-}
-
-@media (min-width: 768px) {
-  .hero-text-backdrop {
-    inset: -2.5rem -2rem -3rem;
-  }
+.hero-heading.hero-text-shadow {
+  text-shadow:
+    0 2px 14px rgba(0, 0, 0, 0.32),
+    0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
 .dark .icon-circle {
